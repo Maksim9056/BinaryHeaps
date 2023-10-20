@@ -49,15 +49,15 @@ namespace ConsoleApp53
     
 
    private void ShiftUp(int index)
-{
+   {
     int parentIndex = (index - 1) / 2;
-    while (parentIndex >= 0 && heap[parentIndex] < heap[index])
+    while (parentIndex >= 0 && heap[parentIndex] > heap[index])
     {
         Swap(parentIndex, index);
         index = parentIndex;
         parentIndex = (index - 1) / 2;
     }
-}
+   }
 
 private void ShiftDown(int index)
 {
@@ -67,12 +67,12 @@ private void ShiftDown(int index)
         int rightChildIndex = 2 * index + 2;
         int largest = index;
 
-        if (leftChildIndex < size && heap[leftChildIndex] > heap[largest])
+        if (leftChildIndex < size && heap[leftChildIndex] < heap[largest])
         {
             largest = leftChildIndex;
         }
 
-        if (rightChildIndex < size && heap[rightChildIndex] > heap[largest])
+        if (rightChildIndex < size && heap[rightChildIndex] < heap[largest])
         {
             largest = rightChildIndex;
         }
