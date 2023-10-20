@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Максим\\source\\repos\\ConsoleApp53\\ConsoleApp53\\ConsoleApp53.csproj",
+      "projectUniqueName": "C:\\Users\\Максим\\Source\\Repos\\BinaryHeaps\\ConsoleApp53\\ConsoleApp53.csproj",
       "projectName": "ConsoleApp53",
-      "projectPath": "C:\\Users\\Максим\\source\\repos\\ConsoleApp53\\ConsoleApp53\\ConsoleApp53.csproj",
+      "projectPath": "C:\\Users\\Максим\\Source\\Repos\\BinaryHeaps\\ConsoleApp53\\ConsoleApp53.csproj",
       "packagesPath": "C:\\Users\\Максим\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Максим\\source\\repos\\ConsoleApp53\\ConsoleApp53\\obj\\",
+      "outputPath": "C:\\Users\\Максим\\Source\\Repos\\BinaryHeaps\\ConsoleApp53\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

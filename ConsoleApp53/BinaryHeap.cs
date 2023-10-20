@@ -8,14 +8,15 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleApp53
 {
+
     public class BinaryHeap
     {
-        int[] heap;
-        int size;
+        public      int[] heap;
+        public int size;
 
         public BinaryHeap()
         {
-            heap = new int[120];
+            heap = new int[31];
             size = 0;
         }
 
@@ -31,9 +32,10 @@ namespace ConsoleApp53
             ShiftUp(size - 1);
         }
 
-        public int Delete(int i)
+        public int Delete()
         {
             if (size == 0) {
+
                 throw new Exception("Heap is empty");
             }
 
@@ -41,7 +43,7 @@ namespace ConsoleApp53
             int root = heap[0];
             heap[0] = heap[size - 1];
             size--;
-            ShiftDown(i);
+            ShiftDown(0);
             return root;
         }
     
@@ -114,12 +116,18 @@ public void Print()
 }
 
 
-/// <summary>
-/// Отрисовка дерева
-/// </summary>
-/// <param name="currentNode"></param>
-/// <param name="indent"></param>
-private void PrintNode(int index, string indent)
+        public int getElement(int index)
+        {
+            return heap[index];
+        }
+
+
+        /// <summary>
+        /// Отрисовка дерева
+        /// </summary>
+        /// <param name="currentNode"></param>
+        /// <param name="indent"></param>
+        private void PrintNode(int index, string indent)
 {
     if (index < size)
     {
@@ -141,6 +149,35 @@ private void PrintNode(int index, string indent)
         }
     }
 
-}
+    }
+
+
+
+        public int binarySearch(int target)
+        {
+            int left = 0;
+            int right = size - 1;
+
+            while (left <= right)
+            {
+                int mid = (left + right) / 2;
+
+                if (heap[mid] == target)
+                {
+                    return mid; // Элемент найден
+                }
+                else if (heap[mid] < target)
+                {
+                    left = mid + 1; // Искомый элемент может находиться в правой половине
+                }
+                else
+                {
+                    right = mid - 1; // Искомый элемент может находиться в левой половине
+                }
+            }
+
+            return -1; 
+            // Элемент не найден
+        }
     }
 }

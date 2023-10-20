@@ -12,15 +12,32 @@
             foreach (int i in d)
             {
                 binaryHeap.Insert(i);
+
+
+
             }
+
+
+          
+            HeapSort heapSort = new HeapSort();
+
 
              Console.WriteLine("Root");
              binaryHeap.Print();
-              binaryHeap.Delete(4);
+          //    binaryHeap.Delete();
             Console.WriteLine();
+            Console.WriteLine();
+            var Min = binaryHeap.binarySearch(4);
+            Console.WriteLine(Min);
+
+
             Console.WriteLine();
 
             Console.WriteLine();
+
+            Console.WriteLine();
+            Console.WriteLine();
+
             binaryHeap.Print();
 
             Console.ReadLine();
